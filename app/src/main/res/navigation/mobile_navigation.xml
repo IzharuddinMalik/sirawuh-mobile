@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_splash">
+
+    <fragment
+        android:id="@+id/navigation_splash"
+        android:name="com.bebasasa.ui.splashscreen.SplashScreenFragment"
+        tools:layout="@layout/fragment_splashscreen">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_login"
+        android:name="com.bebasasa.ui.login.LoginFragment"
+        tools:layout="@layout/fragment_login">
+
+        <deepLink app:uri="@string/login_route" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.bebasasa.ui.home.HomeFragment"
+        tools:layout="@layout/fragment_home">
+
+        <deepLink app:uri="@string/home_route" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_informasi_kelas"
+        android:name="com.bebasasa.ui.kelas.informasi.InformasiKelasFragment"
+        tools:layout="@layout/fragment_informasi_kelas">
+
+        <deepLink app:uri="@string/informasi_kelas_route" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_penilaian_kelas"
+        android:name="com.bebasasa.ui.kelas.penilaian.PenilaianKelasFragment"
+        tools:layout="@layout/fragment_penilaian_kelas">
+
+        <deepLink app:uri="@string/penilaian_kelas_route" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_tanyajawab_kelas"
+        android:name="com.bebasasa.ui.kelas.tanyajawab.TanyaJawabKelasFragment"
+        tools:layout="@layout/fragment_tanya_jawab_kelas">
+
+        <deepLink app:uri="@string/tanya_jawab_kelas_route" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.bebasasa.ui.profile.ProfileFragment"
+        tools:layout="@layout/fragment_profile">
+
+        <deepLink app:uri="@string/profile_route" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_tambahinformasi_kelas"
+        android:name="com.bebasasa.ui.kelas.informasi.BuatInformasiFragment"
+        tools:layout="@layout/fragment_buat_informasi">
+
+        <deepLink app:uri="@string/tambah_informasi_kelas_route" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_ubahinformasi_kelas"
+        android:name="com.bebasasa.ui.kelas.informasi.UbahInformasiFragment"
+        tools:layout="@layout/fragment_ubah_informasi">
+
+        <deepLink app:uri="@string/ubah_informasi_kelas_route" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_penilaian_kelas9a"
+        android:name="com.bebasasa.ui.kelas.penilaian.PenilaianKelas9AFragment"
+        tools:layout="@layout/fragment_penilaian_kelas_9a">
+
+        <deepLink app:uri="@string/list_kelas_9a_penilaian_route" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_penilaian_kelas9b"
+        android:name="com.bebasasa.ui.kelas.penilaian.PenilaianKelas9BFragment"
+        tools:layout="@layout/fragment_penilaian_kelas_9b">
+
+        <deepLink app:uri="@string/list_kelas_9b_penilaian_route" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_tambah_penilaian"
+        android:name="com.bebasasa.ui.kelas.penilaian.TambahPenilaianFragment"
+        tools:layout="@layout/fragment_tambah_penilaian">
+
+        <deepLink app:uri="@string/tambah_penilaian_route" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_detail_penilaian"
+        android:name="com.bebasasa.ui.kelas.penilaian.DetailPenilaianKelasFragment"
+        tools:layout="@layout/fragment_detail_penilaian_kelas">
+
+        <deepLink app:uri="@string/detail_penilaian_route" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_tambah_tanyajawab"
+        android:name="com.bebasasa.ui.kelas.tanyajawab.BuatTanyaJawabFragment"
+        tools:layout="@layout/fragment_buat_tanya_jawab">
+
+        <deepLink app:uri="@string/tambah_tanya_jawab_route" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_detail_tanyajawab"
+        android:name="com.bebasasa.ui.kelas.tanyajawab.DetailForumFragment"
+        tools:layout="@layout/fragment_detail_forum">
+
+        <deepLink app:uri="@string/detail_forum_tanyajawab_route" />
+    </fragment>
+
+</navigation>

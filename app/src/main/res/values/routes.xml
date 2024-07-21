@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="route_host">route host</string>
+
+    <string name="root_route">app://bebasasa.com/root</string>
+    <string name="login_route">app://bebasasa.com/login</string>
+    <string name="home_route">app://bebasasa.com/home?destination={destination}</string>
+    <string name="informasi_kelas_route">app://bebasasa.com/informasikelas</string>
+    <string name="tanya_jawab_kelas_route">app://bebasasa.com/tanyajawabkelas</string>
+    <string name="penilaian_kelas_route">app://bebasasa.com/penilaiankelas</string>
+    <string name="profile_route">app://bebasasa.com/profile</string>
+    <string name="tambah_informasi_kelas_route">app://bebasasa.com/tambahinformasikelas</string>
+    <string name="ubah_informasi_kelas_route">app://bebasasa.com/ubahinformasikelas?idinformasi={idinformasi}&amp;judulinformasi={judulinformasi}&amp;deskripsi={deskripsi}</string>
+    <string name="list_kelas_9a_penilaian_route">app://bebasasa.com/listkelas9apenilaian</string>
+    <string name="list_kelas_9b_penilaian_route">app://bebasasa.com/listkelas9bpenilaian</string>
+    <string name="tambah_penilaian_route">app://bebasasa.com/tambahpenilaian?kelas={kelas}</string>
+    <string name="detail_penilaian_route">app://bebasasa.com/detailpenilaian?tanggal={tanggal}&amp;kelas={kelas}&amp;judul={judul}</string>
+    <string name="tambah_tanya_jawab_route">app://bebasasa.com/tambahtanyajawab</string>
+    <string name="detail_forum_tanyajawab_route">app://bebasasa.com/detailforumtanyajawab?idtanyajawab={idtanyajawab}&amp;judul={judul}&amp;nama={nama}&amp;tanggal={tanggal}</string>
+</resources>

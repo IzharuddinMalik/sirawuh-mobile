@@ -1,0 +1,71 @@
+<resources>
+    <string name="app_name">Bebasin Asa</string>
+    <string name="message_unauthorized">Akses Anda sudah berakhir. Silakan Login kembali</string>
+    <string name="page_not_found">Halaman tidak ditemukan</string>
+    <string name="nipnis_invalid">NIP/NIS tidak boleh kosong</string>
+    <string name="error_list_informasi">Informasi kelas belum ditambahkan. Silahkan tambah papan informasi kelas.</string>
+    <string name="field_empty">Tidak boleh kosong.</string>
+    <string name="label_yes">Ya</string>
+    <string name="label_no">Tidak</string>
+    <string name="label_button_edit">Ubah</string>
+    <string name="label_button_delete">Hapus</string>
+    <string name="label_desc_delete">Apakah anda yakin akan menghapus ini?</string>
+
+    // Login
+    <string name="title_login_akun">Selamat datang di halaman masuk Bebasin Asa,\nsilahkan isi dengan Nomor Induk Siswa/Pegawai.</string>
+    <string name="number_nis_nip">Nomor Induk Siswa/Pegawai</string>
+    <string name="label_button_login">Masuk Akun</string>
+
+    // Home
+    <string name="label_home">Home</string>
+    <string name="label_kelas">Kelas</string>
+    <string name="title_welcome_home">Halo, Selamat Datang Kembali</string>
+    <string name="title_papan_informasi_home">Papan Informasi</string>
+    <string name="label_see_detail">Lihat Detail</string>
+
+    // Kelas
+    <string name="title_nama_kelas">Kelas Bahasa Indonesia</string>
+    <string name="title_nama_guru">Guru Kelas: Rina Harwati, S.Pd., M.Pd</string>
+    <string name="label_informasi_kelas">Informasi Kelas</string>
+    <string name="label_tanyajawab_kelas">Tanya Jawab</string>
+    <string name="label_penilaian_kelas">Penilaian</string>
+    <string name="title_create_informasi_kelas">Buat Informasi</string>
+    <string name="title_create_penilaian_kelas">Buat Penilaian</string>
+    <string name="title_create_tanya_jawab_kelas">Buat Tanya Jawab</string>
+
+    // Profile
+    <string name="label_logout">Keluar Akun</string>,
+    <string name="title_profile">Profil</string>
+
+    <string name="route_home_host">route home host</string>
+
+    // Buat Informasi
+    <string name="title_judul_informasi">Judul Informasi</string>
+    <string name="title_deskripsi_informasi">Deskripsi Informasi</string>
+    <string name="title_media_informasi">Media Informasi</string>
+    <string name="title_tambah_informasi">Tambah Informasi</string>
+    <string name="title_ubah_informasi">Ubah Informasi</string>
+
+    // Penilaian
+    <string name="title_tambah_penilaian">Tambah Penilaian</string>
+    <string name="title_judul_penilaian">Judul Penilaian</string>
+    <string name="title_tanggal_penilaian">Tanggal Penilaian</string>
+    <string name="title_daftar_siswa_penilaian">Daftar Siswa</string>
+    <string name="label_button_tambah_nilai">Tambah</string>
+    <string name="label_button_tambah_penilaian">Tambah Penilaian</string>
+    <string name="label_nilai">Nilai</string>
+    <string name="label_kelas_9a">Kelas 9A</string>
+    <string name="label_kelas_9b">Kelas 9B</string>
+    <string name="label_tanggal_penilaian">Tanggal Penilaian: %1$s</string>
+    <string name="label_nipnis">NIS</string>
+    <string name="label_nama">Nama</string>
+
+    // Tanya Jawab
+    <string name="title_judul_tanya_jawab">Judul Tanya Jawab</string>
+    <string name="label_button_buat_tanya_jawab">Buat Tanya Jawab</string>
+    <string name="label_dibuatoleh_tanya_jawab">Dibuat oleh: %1$s</string>
+    <string name="label_message_chat_tanya_jawab">Isi pesan disini...</string>
+    <string name="label_kirim_message_chat_tanya_jawab">Kirim</string>
+    <string name="title_detaiL_tanya_jawab">Detail Tanya Jawab</string>
+    <string name="title_jawaban_tanya_jawab">Jawaban</string>
+</resources>

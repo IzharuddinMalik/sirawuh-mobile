@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_outlined_gray"
+    android:layout_marginHorizontal="@dimen/_15sdp"
+    android:layout_marginTop="@dimen/_10sdp"
+    android:padding="@dimen/_15sdp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvDatePapanInformasiHome"
+        tools:text="01 November 2023"
+        android:textSize="@dimen/_11ssp"
+        android:textColor="@color/textColorSecondary"
+        android:textAlignment="textEnd"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvTitlePapanInformasiHome"
+        tools:text="Jadwal UTS"
+        android:textSize="@dimen/_13ssp"
+        android:textColor="@color/textColorPrimary"
+        android:textStyle="bold"
+        android:textAlignment="textStart"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:maxLines="1"
+        android:ellipsize="end"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvDescPapanInformasiHome"
+        tools:text="Jadwal UTS dilaksanakan pada tangal 01 Desember 2023"
+        android:textSize="@dimen/_12ssp"
+        android:textColor="@color/textColorSecondary"
+        android:textAlignment="textStart"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:maxLines="3"
+        android:ellipsize="end"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_120sdp"
+        android:id="@+id/ivItemImagePapanInformasiHome"
+        android:scaleType="centerCrop"
+        android:layout_marginVertical="@dimen/_5sdp"
+        android:visibility="visible"/>
+
+    <VideoView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_120sdp"
+        android:id="@+id/vidItemPapanInformasiHome"
+        android:layout_marginVertical="@dimen/_5sdp"
+        android:visibility="gone"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvDetailPapanInformasiHome"
+        android:text="@string/label_see_detail"
+        android:textSize="@dimen/_11ssp"
+        android:textColor="@color/textColorPrimary"
+        android:textStyle="bold"
+        android:textAlignment="textEnd"/>
+</LinearLayout>

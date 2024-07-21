@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_delete_dialog"
+    android:padding="16dp">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textView6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/textColorPrimary"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        tools:text="@string/label_button_delete" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_title_wording"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView6"
+        android:layout_marginTop="6dp"
+        android:gravity="center"
+        android:textColor="@color/textColorSecondary"
+        android:textSize="12sp"
+        tools:text="@string/label_desc_delete" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_title_wording"
+        android:layout_marginTop="22dp"
+        android:orientation="horizontal">
+
+        <com.bebasasa.core.customview.BebasAsaButtonView
+            android:id="@+id/btn_tidak"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_2sdp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_button_outlined_red"
+            android:text="@string/label_no"
+            android:textAllCaps="false"
+            android:textColor="@color/primary"
+            android:textSize="@dimen/_11ssp"
+            android:textStyle="bold" />
+
+        <com.bebasasa.core.customview.BebasAsaButtonView
+            android:id="@+id/btn_ya"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_2sdp"
+            android:layout_weight="1"
+            android:text="@string/label_yes"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_11ssp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</RelativeLayout>

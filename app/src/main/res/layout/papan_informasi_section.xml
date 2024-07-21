@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_outlined_gray"
+    android:layout_marginHorizontal="@dimen/_15sdp"
+    android:layout_marginTop="@dimen/_10sdp"
+    android:padding="@dimen/_15sdp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvDatePapanInformasi"
+        tools:text="01 November 2023"
+        android:textSize="@dimen/_11ssp"
+        android:textColor="@color/textColorSecondary"
+        android:textAlignment="textEnd"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvTitlePapanInformasi"
+        tools:text="Jadwal UTS"
+        android:textSize="@dimen/_13ssp"
+        android:textColor="@color/textColorPrimary"
+        android:textStyle="bold"
+        android:textAlignment="textStart"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:maxLines="1"
+        android:ellipsize="end"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvDescPapanInformasi"
+        tools:text="Jadwal UTS dilaksanakan pada tangal 01 Desember 2023"
+        android:textSize="@dimen/_12ssp"
+        android:textColor="@color/textColorSecondary"
+        android:textAlignment="textStart"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:maxLines="3"
+        android:ellipsize="end"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_120sdp"
+        android:id="@+id/ivItemImagePapanInformasi"
+        android:scaleType="centerCrop"
+        android:layout_marginVertical="@dimen/_5sdp"
+        android:visibility="visible"/>
+
+    <VideoView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_120sdp"
+        android:id="@+id/vidItemPapanInformasi"
+        android:layout_marginVertical="@dimen/_5sdp"
+        android:visibility="gone"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvDetailPapanInformasi"
+        android:text="@string/label_see_detail"
+        android:textSize="@dimen/_11ssp"
+        android:textColor="@color/textColorPrimary"
+        android:textStyle="bold"
+        android:textAlignment="textEnd"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="right"
+        android:layout_marginTop="@dimen/_10sdp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/llEditPapanInformasi"
+            android:background="@drawable/bg_outlined_brown"
+            android:paddingHorizontal="@dimen/_10sdp"
+            android:paddingVertical="@dimen/_5sdp">
+
+            <ImageView
+                android:layout_width="@dimen/_16sdp"
+                android:layout_height="@dimen/_16sdp"
+                android:src="@drawable/ic_edit"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_button_edit"
+                android:textSize="@dimen/_12ssp"
+                android:textColor="@color/colorBrown"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/llHapusPapanInformasi"
+            android:background="@drawable/bg_outlined_red"
+            android:paddingHorizontal="@dimen/_10sdp"
+            android:paddingVertical="@dimen/_5sdp"
+            android:layout_marginLeft="@dimen/_5sdp">
+
+            <ImageView
+                android:layout_width="@dimen/_16sdp"
+                android:layout_height="@dimen/_16sdp"
+                android:src="@drawable/ic_delete"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_button_delete"
+                android:textSize="@dimen/_12ssp"
+                android:textColor="@color/colorBrown"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
