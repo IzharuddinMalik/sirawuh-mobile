@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/textView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/_10sdp"
+    android:textAppearance="?android:attr/textAppearanceLarge"
+    android:textColor="@color/textColorPrimary"
+    android:gravity="center_vertical"
+    android:textSize="@dimen/_10ssp"
+    android:checkMark="?android:attr/listChoiceIndicatorSingle"
+    android:ellipsize="marquee"
+    android:background="@android:color/transparent"
+    >
+
+</TextView>

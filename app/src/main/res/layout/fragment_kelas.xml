@@ -42,7 +42,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:id="@+id/llTanyaJawabKelas"
+        android:id="@+id/llKehadiranKelas"
         android:background="@drawable/bg_outlined_gray"
         android:layout_marginTop="@dimen/_20sdp"
         android:layout_marginHorizontal="@dimen/_15sdp"
@@ -51,12 +51,12 @@
         <ImageView
             android:layout_width="@dimen/_24sdp"
             android:layout_height="@dimen/_24sdp"
-            android:src="@drawable/ic_tanya_jawab"/>
+            android:src="@drawable/ic_kehadiran"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/label_tanyajawab_kelas"
+            android:text="@string/label_kehadiran_kelas"
             android:textSize="@dimen/_12ssp"
             android:textColor="@color/textColorPrimary"
             android:layout_gravity="center_vertical"
@@ -73,7 +73,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:id="@+id/llPenilaianKelas"
+        android:id="@+id/llHaidSiswaKelas"
         android:background="@drawable/bg_outlined_gray"
         android:layout_marginTop="@dimen/_20sdp"
         android:layout_marginHorizontal="@dimen/_15sdp"
@@ -82,12 +82,74 @@
         <ImageView
             android:layout_width="@dimen/_24sdp"
             android:layout_height="@dimen/_24sdp"
-            android:src="@drawable/ic_penilaian"/>
+            android:src="@drawable/ic_haidsiswa"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/label_penilaian_kelas"
+            android:text="@string/label_haidsiswa_kelas"
+            android:textSize="@dimen/_12ssp"
+            android:textColor="@color/textColorPrimary"
+            android:layout_gravity="center_vertical"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_weight="1"/>
+
+        <ImageView
+            android:layout_width="@dimen/_24sdp"
+            android:layout_height="@dimen/_24sdp"
+            android:src="@drawable/ic_arrow_right"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/llPiketKelas"
+        android:background="@drawable/bg_outlined_gray"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginHorizontal="@dimen/_15sdp"
+        android:padding="@dimen/_15sdp">
+
+        <ImageView
+            android:layout_width="@dimen/_24sdp"
+            android:layout_height="@dimen/_24sdp"
+            android:src="@drawable/ic_piketkelas"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/label_piket_kelas"
+            android:textSize="@dimen/_12ssp"
+            android:textColor="@color/textColorPrimary"
+            android:layout_gravity="center_vertical"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_weight="1"/>
+
+        <ImageView
+            android:layout_width="@dimen/_24sdp"
+            android:layout_height="@dimen/_24sdp"
+            android:src="@drawable/ic_arrow_right"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/llKasKelas"
+        android:background="@drawable/bg_outlined_gray"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginHorizontal="@dimen/_15sdp"
+        android:padding="@dimen/_15sdp">
+
+        <ImageView
+            android:layout_width="@dimen/_24sdp"
+            android:layout_height="@dimen/_24sdp"
+            android:src="@drawable/ic_kaskelas"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/label_kas_kelas"
             android:textSize="@dimen/_12ssp"
             android:textColor="@color/textColorPrimary"
             android:layout_gravity="center_vertical"

@@ -34,7 +34,7 @@
         android:layout_marginTop="22dp"
         android:orientation="horizontal">
 
-        <com.bebasasa.core.customview.BebasAsaButtonView
+        <com.sirawuh.core.customview.BebasAsaButtonView
             android:id="@+id/btn_tidak"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -47,7 +47,7 @@
             android:textSize="@dimen/_11ssp"
             android:textStyle="bold" />
 
-        <com.bebasasa.core.customview.BebasAsaButtonView
+        <com.sirawuh.core.customview.BebasAsaButtonView
             android:id="@+id/btn_ya"
             android:layout_width="0dp"
             android:layout_height="wrap_content"

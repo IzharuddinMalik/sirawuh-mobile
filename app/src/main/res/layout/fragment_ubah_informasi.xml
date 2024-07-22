@@ -72,7 +72,7 @@
                 android:src="@drawable/ic_upload"/>
         </LinearLayout>
 
-        <com.bebasasa.core.customview.BebasAsaButtonView
+        <com.sirawuh.core.customview.BebasAsaButtonView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/btnUbahInformasi"

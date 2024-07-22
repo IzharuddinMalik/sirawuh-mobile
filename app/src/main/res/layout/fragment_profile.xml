@@ -120,7 +120,7 @@
         android:orientation="vertical"
         android:gravity="bottom|center_horizontal">
 
-        <com.bebasasa.core.customview.BebasAsaButtonView
+        <com.sirawuh.core.customview.BebasAsaButtonView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/btnLogout"

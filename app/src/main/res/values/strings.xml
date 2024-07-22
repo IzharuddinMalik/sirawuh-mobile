@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Bebasin Asa</string>
+    <string name="app_name">Si Rawuh</string>
     <string name="message_unauthorized">Akses Anda sudah berakhir. Silakan Login kembali</string>
     <string name="page_not_found">Halaman tidak ditemukan</string>
     <string name="nipnis_invalid">NIP/NIS tidak boleh kosong</string>
@@ -12,7 +12,7 @@
     <string name="label_desc_delete">Apakah anda yakin akan menghapus ini?</string>
 
     // Login
-    <string name="title_login_akun">Selamat datang di halaman masuk Bebasin Asa,\nsilahkan isi dengan Nomor Induk Siswa/Pegawai.</string>
+    <string name="title_login_akun">Selamat datang di halaman masuk Si Rawuh,\nsilahkan isi dengan Nomor Induk Siswa/Pegawai.</string>
     <string name="number_nis_nip">Nomor Induk Siswa/Pegawai</string>
     <string name="label_button_login">Masuk Akun</string>
 
@@ -24,14 +24,18 @@
     <string name="label_see_detail">Lihat Detail</string>
 
     // Kelas
-    <string name="title_nama_kelas">Kelas Bahasa Indonesia</string>
-    <string name="title_nama_guru">Guru Kelas: Rina Harwati, S.Pd., M.Pd</string>
+    <string name="title_nama_kelas">Kelas IX E</string>
+    <string name="title_nama_guru">Wali Kelas: Kwartanti Fajriatin, M.Pd</string>
     <string name="label_informasi_kelas">Informasi Kelas</string>
-    <string name="label_tanyajawab_kelas">Tanya Jawab</string>
-    <string name="label_penilaian_kelas">Penilaian</string>
+    <string name="label_haidsiswa_kelas">Haid</string>
+    <string name="label_kehadiran_kelas">Kehadiran</string>
+    <string name="label_piket_kelas">Piket</string>
+    <string name="label_kas_kelas">Kas</string>
     <string name="title_create_informasi_kelas">Buat Informasi</string>
-    <string name="title_create_penilaian_kelas">Buat Penilaian</string>
-    <string name="title_create_tanya_jawab_kelas">Buat Tanya Jawab</string>
+    <string name="title_tambah_kehadiran">Tambah Kehadiran</string>
+    <string name="title_tambah_haidsiswa">Tambah Informasi Haid</string>
+    <string name="title_tambah_piketkelas">Tambah Informasi Piket</string>
+    <string name="title_tambah_kaskelas">Tambah Informasi Kas</string>
 
     // Profile
     <string name="label_logout">Keluar Akun</string>,
@@ -46,26 +50,30 @@
     <string name="title_tambah_informasi">Tambah Informasi</string>
     <string name="title_ubah_informasi">Ubah Informasi</string>
 
-    // Penilaian
-    <string name="title_tambah_penilaian">Tambah Penilaian</string>
-    <string name="title_judul_penilaian">Judul Penilaian</string>
-    <string name="title_tanggal_penilaian">Tanggal Penilaian</string>
-    <string name="title_daftar_siswa_penilaian">Daftar Siswa</string>
-    <string name="label_button_tambah_nilai">Tambah</string>
-    <string name="label_button_tambah_penilaian">Tambah Penilaian</string>
-    <string name="label_nilai">Nilai</string>
-    <string name="label_kelas_9a">Kelas 9A</string>
-    <string name="label_kelas_9b">Kelas 9B</string>
-    <string name="label_tanggal_penilaian">Tanggal Penilaian: %1$s</string>
-    <string name="label_nipnis">NIS</string>
-    <string name="label_nama">Nama</string>
+    // Tambah Kehadiran
+    <string name="title_status_kehadiran">Status Kehadiran</string>
+    <string name="title_foto_kehadiran">Foto Bukti</string>
 
-    // Tanya Jawab
-    <string name="title_judul_tanya_jawab">Judul Tanya Jawab</string>
-    <string name="label_button_buat_tanya_jawab">Buat Tanya Jawab</string>
-    <string name="label_dibuatoleh_tanya_jawab">Dibuat oleh: %1$s</string>
-    <string name="label_message_chat_tanya_jawab">Isi pesan disini...</string>
-    <string name="label_kirim_message_chat_tanya_jawab">Kirim</string>
-    <string name="title_detaiL_tanya_jawab">Detail Tanya Jawab</string>
-    <string name="title_jawaban_tanya_jawab">Jawaban</string>
+    // Tambah Haid Siswa
+    <string name="title_pilih_tanggal_haid">Pilih Tanggal Mulai Haid</string>
+
+    // Tambah Piket Kelas
+    <string name="title_pilih_tanggal_piketkelas">Pilih Tanggal Piket</string>
+    <string name="title_foto_piketkelas">Foto Bukti Piket</string>
+
+    // Tambah Kas Kelas
+    <string name="title_pilih_tanggal_bayarkas">Tanggal Bayar Kas</string>
+
+    // Kehadiran
+    <string name="label_status_kehadiran_item">Status</string>
+    <string name="label_tanggal_kehadiran_item">Tanggal</string>
+    <string name="label_foto_kehadiran_item">Foto</string>
+
+    // Haid Siswa
+    <string name="label_namasiswa_haid_item">Nama Siswa</string>
+    <string name="label_tanggal_haid_item">Tanggal Haid</string>
+
+    // Kas Kelas
+    <string name="label_namasiswa_kas_item">Nama Siswa</string>
+    <string name="label_tanggal_bayarkas_item">Tanggal Bayar Kas</string>
 </resources>

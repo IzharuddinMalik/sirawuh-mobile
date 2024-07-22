@@ -7,14 +7,14 @@
 
     <fragment
         android:id="@+id/navigation_splash"
-        android:name="com.bebasasa.ui.splashscreen.SplashScreenFragment"
+        android:name="com.sirawuh.ui.splashscreen.SplashScreenFragment"
         tools:layout="@layout/fragment_splashscreen">
 
     </fragment>
 
     <fragment
         android:id="@+id/navigation_login"
-        android:name="com.bebasasa.ui.login.LoginFragment"
+        android:name="com.sirawuh.ui.login.LoginFragment"
         tools:layout="@layout/fragment_login">
 
         <deepLink app:uri="@string/login_route" />
@@ -22,7 +22,7 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="com.bebasasa.ui.home.HomeFragment"
+        android:name="com.sirawuh.ui.home.HomeFragment"
         tools:layout="@layout/fragment_home">
 
         <deepLink app:uri="@string/home_route" />
@@ -30,31 +30,15 @@
 
     <fragment
         android:id="@+id/navigation_informasi_kelas"
-        android:name="com.bebasasa.ui.kelas.informasi.InformasiKelasFragment"
+        android:name="com.sirawuh.ui.kelas.informasi.InformasiKelasFragment"
         tools:layout="@layout/fragment_informasi_kelas">
 
         <deepLink app:uri="@string/informasi_kelas_route" />
     </fragment>
 
     <fragment
-        android:id="@+id/navigation_penilaian_kelas"
-        android:name="com.bebasasa.ui.kelas.penilaian.PenilaianKelasFragment"
-        tools:layout="@layout/fragment_penilaian_kelas">
-
-        <deepLink app:uri="@string/penilaian_kelas_route" />
-    </fragment>
-
-    <fragment
-        android:id="@+id/navigation_tanyajawab_kelas"
-        android:name="com.bebasasa.ui.kelas.tanyajawab.TanyaJawabKelasFragment"
-        tools:layout="@layout/fragment_tanya_jawab_kelas">
-
-        <deepLink app:uri="@string/tanya_jawab_kelas_route" />
-    </fragment>
-
-    <fragment
         android:id="@+id/navigation_profile"
-        android:name="com.bebasasa.ui.profile.ProfileFragment"
+        android:name="com.sirawuh.ui.profile.ProfileFragment"
         tools:layout="@layout/fragment_profile">
 
         <deepLink app:uri="@string/profile_route" />
@@ -62,7 +46,7 @@
 
     <fragment
         android:id="@+id/navigation_tambahinformasi_kelas"
-        android:name="com.bebasasa.ui.kelas.informasi.BuatInformasiFragment"
+        android:name="com.sirawuh.ui.kelas.informasi.BuatInformasiFragment"
         tools:layout="@layout/fragment_buat_informasi">
 
         <deepLink app:uri="@string/tambah_informasi_kelas_route" />
@@ -70,58 +54,74 @@
 
     <fragment
         android:id="@+id/navigation_ubahinformasi_kelas"
-        android:name="com.bebasasa.ui.kelas.informasi.UbahInformasiFragment"
+        android:name="com.sirawuh.ui.kelas.informasi.UbahInformasiFragment"
         tools:layout="@layout/fragment_ubah_informasi">
 
         <deepLink app:uri="@string/ubah_informasi_kelas_route" />
     </fragment>
 
     <fragment
-        android:id="@+id/navigation_penilaian_kelas9a"
-        android:name="com.bebasasa.ui.kelas.penilaian.PenilaianKelas9AFragment"
-        tools:layout="@layout/fragment_penilaian_kelas_9a">
+        android:id="@+id/navigation_kehadiran_kelas"
+        android:name="com.sirawuh.ui.kelas.kehadiran.KehadiranKelasFragment"
+        tools:layout="@layout/fragment_kehadiran_kelas">
 
-        <deepLink app:uri="@string/list_kelas_9a_penilaian_route" />
+        <deepLink app:uri="@string/kehadiran_kelas_route" />
     </fragment>
 
     <fragment
-        android:id="@+id/navigation_penilaian_kelas9b"
-        android:name="com.bebasasa.ui.kelas.penilaian.PenilaianKelas9BFragment"
-        tools:layout="@layout/fragment_penilaian_kelas_9b">
+        android:id="@+id/navigation_tambahkehadiran_kelas"
+        android:name="com.sirawuh.ui.kelas.kehadiran.TambahKehadiranFragment"
+        tools:layout="@layout/fragment_tambah_kehadiran">
 
-        <deepLink app:uri="@string/list_kelas_9b_penilaian_route" />
+        <deepLink app:uri="@string/tambah_kehadiran_kelas_route" />
     </fragment>
 
     <fragment
-        android:id="@+id/navigation_tambah_penilaian"
-        android:name="com.bebasasa.ui.kelas.penilaian.TambahPenilaianFragment"
-        tools:layout="@layout/fragment_tambah_penilaian">
+        android:id="@+id/navigation_haidsiswa_kelas"
+        android:name="com.sirawuh.ui.kelas.haidsiswa.HaidSiswaFragment"
+        tools:layout="@layout/fragment_haidsiswa_kelas">
 
-        <deepLink app:uri="@string/tambah_penilaian_route" />
+        <deepLink app:uri="@string/haid_kelas_route" />
     </fragment>
 
     <fragment
-        android:id="@+id/navigation_detail_penilaian"
-        android:name="com.bebasasa.ui.kelas.penilaian.DetailPenilaianKelasFragment"
-        tools:layout="@layout/fragment_detail_penilaian_kelas">
+        android:id="@+id/navigation_tambahhaidsiswa_kelas"
+        android:name="com.sirawuh.ui.kelas.haidsiswa.TambahHaidSiswaFragment"
+        tools:layout="@layout/fragment_tambah_haidsiswa">
 
-        <deepLink app:uri="@string/detail_penilaian_route" />
+        <deepLink app:uri="@string/tambah_haid_kelas_route" />
     </fragment>
 
     <fragment
-        android:id="@+id/navigation_tambah_tanyajawab"
-        android:name="com.bebasasa.ui.kelas.tanyajawab.BuatTanyaJawabFragment"
-        tools:layout="@layout/fragment_buat_tanya_jawab">
+        android:id="@+id/navigation_piket_kelas"
+        android:name="com.sirawuh.ui.kelas.piketkelas.PiketKelasFragment"
+        tools:layout="@layout/fragment_piket_kelas">
 
-        <deepLink app:uri="@string/tambah_tanya_jawab_route" />
+        <deepLink app:uri="@string/piket_kelas_route" />
     </fragment>
 
     <fragment
-        android:id="@+id/navigation_detail_tanyajawab"
-        android:name="com.bebasasa.ui.kelas.tanyajawab.DetailForumFragment"
-        tools:layout="@layout/fragment_detail_forum">
+        android:id="@+id/navigation_tambahpiket_kelas"
+        android:name="com.sirawuh.ui.kelas.piketkelas.TambahPiketKelasFragment"
+        tools:layout="@layout/fragment_tambah_piket_kelas">
 
-        <deepLink app:uri="@string/detail_forum_tanyajawab_route" />
+        <deepLink app:uri="@string/tambah_piket_kelas_route" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_kas_kelas"
+        android:name="com.sirawuh.ui.kelas.kaskelas.KasKelasFragment"
+        tools:layout="@layout/fragment_kas_kelas">
+
+        <deepLink app:uri="@string/kas_kelas_route" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_tambahkas_kelas"
+        android:name="com.sirawuh.ui.kelas.kaskelas.TambahKasKelasFragment"
+        tools:layout="@layout/fragment_tambah_bayar_kas">
+
+        <deepLink app:uri="@string/tambah_bayarkas_kelas_route" />
     </fragment>
 
 </navigation>

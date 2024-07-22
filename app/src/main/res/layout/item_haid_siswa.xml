@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_outlined_gray"
+    android:layout_margin="@dimen/_10sdp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:padding="@dimen/_10sdp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/label_namasiswa_haid_item"
+            android:textSize="@dimen/_12ssp"
+            android:textColor="@color/textColorPrimary"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvNamaSiswaHaidItem"
+            tools:text="Nama Siswa"
+            android:textSize="@dimen/_12ssp"
+            android:textColor="@color/textColorPrimary"
+            android:textStyle="normal"
+            android:layout_marginTop="@dimen/_5sdp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:padding="@dimen/_10sdp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/label_tanggal_haid_item"
+            android:textSize="@dimen/_12ssp"
+            android:textColor="@color/textColorPrimary"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvTanggalHaidItem"
+            tools:text="2 Juli 2024"
+            android:textSize="@dimen/_12ssp"
+            android:textColor="@color/textColorPrimary"
+            android:textStyle="normal"
+            android:layout_marginTop="@dimen/_5sdp"/>
+    </LinearLayout>
+</LinearLayout>
