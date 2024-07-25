@@ -1,5 +1,6 @@
 package com.sirawuh.ui.kelas.kehadiran
 
+import android.app.ProgressDialog
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.sirawuh.R
@@ -15,8 +16,12 @@ class KehadiranKelasFragment:
 
     private val viewModel: KehadiranViewModel by viewModels()
 
+    private var mProgressDialog: ProgressDialog? = null
+
     override fun onCreated() {
         viewModel.RequestHandler().getListKehadiran()
+
+        mProgressDialog = ProgressDialog(requireActivity())
 
         observer()
         setupListener()
@@ -42,6 +47,17 @@ class KehadiranKelasFragment:
     }
 
     private fun observer() {
+
+        observe(viewModel.transparentLoading) {
+            if (it) {
+                mProgressDialog?.setTitle("Sedang memuat...")
+                mProgressDialog?.setMessage("Harap menunggu sebentar...")
+                mProgressDialog?.show()
+            } else {
+                mProgressDialog?.dismiss()
+            }
+        }
+
         observe(viewModel.listKehadiranResp) {
             if (it != null) {
                 binding.rvListKehadiranSiswa.layoutManager = LinearLayoutManager(requireActivity())

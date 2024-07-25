@@ -2,6 +2,7 @@ package com.sirawuh.ui.kelas.piketkelas
 
 import android.Manifest
 import android.app.Activity
+import android.app.ProgressDialog
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.net.Uri
@@ -28,9 +29,11 @@ class TambahPiketKelasFragment:
     BaseFragment<FragmentTambahPiketKelasBinding>(FragmentTambahPiketKelasBinding::inflate) {
 
     private val viewModel: PiketKelasViewModel by viewModels()
+    private var mProgressDialog: ProgressDialog? = null
 
     override fun onCreated() {
         viewModel.initState()
+        mProgressDialog = ProgressDialog(requireActivity())
 
         checkPermission(
             Manifest.permission.READ_MEDIA_VIDEO,
@@ -87,6 +90,16 @@ class TambahPiketKelasFragment:
     }
 
     private fun observer() {
+        observe(viewModel.transparentLoading) {
+            if (it) {
+                mProgressDialog?.setTitle("Sedang menambahkan data")
+                mProgressDialog?.setMessage("Harap menunggu sebentar...")
+                mProgressDialog?.show()
+            } else {
+                mProgressDialog?.dismiss()
+            }
+        }
+
         observe(viewModel.tanggalPiketConvert) {
             if (it != "") {
                 binding.tvPilihTanggalPiket.text = it

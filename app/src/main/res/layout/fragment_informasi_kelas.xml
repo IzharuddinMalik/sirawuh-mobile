@@ -3,7 +3,8 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/containerInformasiKelas">
+    android:id="@+id/containerInformasiKelas"
+    android:background="@color/white">
 
     <include layout="@layout/toolbar"
         android:id="@+id/toolbarInformasiKelas"/>

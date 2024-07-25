@@ -1,5 +1,6 @@
 package com.sirawuh.ui.kelas.haidsiswa
 
+import android.app.ProgressDialog
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.sirawuh.R
@@ -15,10 +16,11 @@ class HaidSiswaFragment:
     BaseFragment<FragmentHaidsiswaKelasBinding>(FragmentHaidsiswaKelasBinding::inflate) {
 
     private val viewModel: HaidSiswaViewModel by viewModels()
+    private var mProgressDialog: ProgressDialog? = null
 
     override fun onCreated() {
         viewModel.RequestHandler().getListHaidSiswa()
-
+        mProgressDialog = ProgressDialog(requireActivity())
         initComponent()
         setupListener()
         observer()
@@ -45,6 +47,16 @@ class HaidSiswaFragment:
     }
 
     private fun observer() {
+        observe(viewModel.transparentLoading) {
+            if (it) {
+                mProgressDialog?.setTitle("Sedang memuat...")
+                mProgressDialog?.setMessage("Harap menunggu sebentar...")
+                mProgressDialog?.show()
+            } else {
+                mProgressDialog?.dismiss()
+            }
+        }
+
         observe(viewModel.listSiswaHaidResp) {
             binding.apply {
                 if (it != null) {

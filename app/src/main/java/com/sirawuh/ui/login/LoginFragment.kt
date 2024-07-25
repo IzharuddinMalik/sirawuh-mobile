@@ -1,5 +1,6 @@
 package com.sirawuh.ui.login
 
+import android.app.ProgressDialog
 import androidx.appcompat.content.res.AppCompatResources
 import androidx.core.widget.doOnTextChanged
 import androidx.fragment.app.viewModels
@@ -22,9 +23,11 @@ class LoginFragment :
     lateinit var preferenceHelper: PreferenceHelper
 
     private val viewModel: LoginViewModel by viewModels()
+    private var mProgressDialog: ProgressDialog? = null
 
     override fun onCreated() {
         viewModel.initState()
+        mProgressDialog = ProgressDialog(requireActivity())
         initComponent()
         setupListener()
         observer()
@@ -45,6 +48,17 @@ class LoginFragment :
     }
 
     private fun observer() {
+
+        observe(viewModel.transparentLoading) {
+            if (it) {
+                mProgressDialog?.setTitle("Mengotentikasi Akun")
+                mProgressDialog?.setMessage("Harap menunggu...")
+                mProgressDialog?.show()
+            } else {
+                mProgressDialog?.dismiss()
+            }
+        }
+
         observe(viewModel.nipnisValid) {
             val message = if (!it) getString(R.string.nipnis_invalid) else ""
             if (message != "") Snackbar.make(binding.containerLogin, message, Snackbar.LENGTH_SHORT)

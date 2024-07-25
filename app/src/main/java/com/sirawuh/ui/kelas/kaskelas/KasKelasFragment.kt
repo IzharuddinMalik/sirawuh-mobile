@@ -1,5 +1,6 @@
 package com.sirawuh.ui.kelas.kaskelas
 
+import android.app.ProgressDialog
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.sirawuh.R
@@ -14,10 +15,11 @@ class KasKelasFragment:
     BaseFragment<FragmentKasKelasBinding>(FragmentKasKelasBinding::inflate) {
 
     private val viewModel: KasKelasViewModel by viewModels()
+    private var mProgressDialog: ProgressDialog? = null
 
     override fun onCreated() {
         viewModel.RequestHandler().getListKasKelas()
-
+        mProgressDialog = ProgressDialog(requireActivity())
         initComponent()
         setupListener()
         observer()
@@ -45,6 +47,16 @@ class KasKelasFragment:
     }
 
     private fun observer() {
+        observe(viewModel.transparentLoading) {
+            if (it) {
+                mProgressDialog?.setTitle("Sedang memuat...")
+                mProgressDialog?.setMessage("Harap menunggu sebentar...")
+                mProgressDialog?.show()
+            } else {
+                mProgressDialog?.dismiss()
+            }
+        }
+
         observe(viewModel.listKasKelasResp) {
             if (it != null) {
                 binding.rvListKasKelas.apply {

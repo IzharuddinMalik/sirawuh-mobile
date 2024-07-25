@@ -1,5 +1,6 @@
 package com.sirawuh.ui.kelas.informasi
 
+import android.app.ProgressDialog
 import android.view.View
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -25,9 +26,11 @@ class InformasiKelasFragment :
     lateinit var preferenceHelper: PreferenceHelper
 
     private val viewModel: InformasiKelasViewModel by viewModels()
+    private var mProgressDialog: ProgressDialog? = null
 
     override fun onCreated() {
         viewModel.RequestHandler().getListInformasi()
+        mProgressDialog = ProgressDialog(requireActivity())
         binding.apply {
             toolbarInformasiKelas.ivBack.setOnClickListener {
                 navigateToUri(
@@ -63,6 +66,16 @@ class InformasiKelasFragment :
     }
 
     private fun observer() {
+        observe(viewModel.transparentLoading) {
+            if (it) {
+                mProgressDialog?.setTitle("Sedang memuat...")
+                mProgressDialog?.setMessage("Harap menunggu sebentar...")
+                mProgressDialog?.show()
+            } else {
+                mProgressDialog?.dismiss()
+            }
+        }
+
         observe(viewModel.listInformasiKelas) {
             binding.rvListInformasiKelas.apply {
                 this.layoutManager = LinearLayoutManager(requireActivity())

@@ -1,6 +1,7 @@
 package com.sirawuh.core.customview
 
 import android.annotation.SuppressLint
+import android.app.ActionBar.LayoutParams
 import android.app.Dialog
 import android.content.Context
 import android.graphics.Color
@@ -67,6 +68,7 @@ object CustomDialog {
             dialog.window!!.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
             dialog.setContentView(binding.root)
             dialog.setCancelable(true)
+            dialog.window!!.setLayout(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT)
             binding.tvTitlePapanInformasiDetail.text = item.judulpengumuman
             binding.tvDatePapanInformasiDetail.text = item.created_date?.let { convertDateWithDay(it) }
             binding.tvDescPapanInformasiDetail.text = item.isipengumuman
@@ -129,6 +131,11 @@ object CustomDialog {
                     binding.ivItemImagePapanInformasiDetail.visibility = View.GONE
                 }
             }
+
+            binding.ivCloseDetailInformasi.setOnClickListener {
+                dialog.dismiss()
+            }
+
             dialog.show()
         }
     }

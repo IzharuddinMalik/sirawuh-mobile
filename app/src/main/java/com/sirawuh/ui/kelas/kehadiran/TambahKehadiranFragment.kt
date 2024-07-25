@@ -2,6 +2,7 @@ package com.sirawuh.ui.kelas.kehadiran
 
 import android.Manifest
 import android.app.Activity
+import android.app.ProgressDialog
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.net.Uri
@@ -29,9 +30,11 @@ class TambahKehadiranFragment:
     BaseFragment<FragmentTambahKehadiranBinding>(FragmentTambahKehadiranBinding::inflate) {
 
     private val viewModel: KehadiranViewModel by viewModels()
+    private var mProgressDialog: ProgressDialog? = null
 
     override fun onCreated() {
         viewModel.initState()
+        mProgressDialog = ProgressDialog(requireActivity())
 
         checkPermission(
             Manifest.permission.READ_MEDIA_VIDEO,
@@ -71,6 +74,16 @@ class TambahKehadiranFragment:
     }
 
     private fun observer() {
+
+        observe(viewModel.transparentLoading) {
+            if (it) {
+                mProgressDialog?.setTitle("Sedang menambahkan data")
+                mProgressDialog?.setMessage("Harap menunggu sebentar...")
+                mProgressDialog?.show()
+            } else {
+                mProgressDialog?.dismiss()
+            }
+        }
 
         observe(viewModel.listStatusKehadiran) {
             if (it != null) {

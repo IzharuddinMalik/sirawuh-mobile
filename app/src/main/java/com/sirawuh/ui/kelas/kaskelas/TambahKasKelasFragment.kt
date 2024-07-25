@@ -1,5 +1,6 @@
 package com.sirawuh.ui.kelas.kaskelas
 
+import android.app.ProgressDialog
 import android.widget.Toast
 import androidx.fragment.app.viewModels
 import com.google.android.material.datepicker.MaterialDatePicker
@@ -17,8 +18,10 @@ class TambahKasKelasFragment:
     BaseFragment<FragmentTambahBayarKasBinding>(FragmentTambahBayarKasBinding::inflate) {
 
     private val viewModel: KasKelasViewModel by viewModels()
+    private var mProgressDialog: ProgressDialog? = null
 
     override fun onCreated() {
+        mProgressDialog = ProgressDialog(requireActivity())
         initComponent()
         setupListener()
         observer()
@@ -60,6 +63,16 @@ class TambahKasKelasFragment:
     }
 
     private fun observer() {
+        observe(viewModel.transparentLoading) {
+            if (it) {
+                mProgressDialog?.setTitle("Sedang menambahkan data")
+                mProgressDialog?.setMessage("Harap menunggu sebentar...")
+                mProgressDialog?.show()
+            } else {
+                mProgressDialog?.dismiss()
+            }
+        }
+
         observe(viewModel.tanggalBayarKasConvert) {
             if (it != "") {
                 binding.tvPilihTanggalBayarKas.text = it

@@ -1,5 +1,6 @@
 package com.sirawuh.ui.kelas.piketkelas
 
+import android.app.ProgressDialog
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.sirawuh.R
@@ -14,10 +15,11 @@ class PiketKelasFragment:
     BaseFragment<FragmentPiketKelasBinding>(FragmentPiketKelasBinding::inflate) {
 
     private val viewModel: PiketKelasViewModel by viewModels()
+    private var mProgressDialog: ProgressDialog? = null
 
     override fun onCreated() {
         viewModel.RequestHandler().getListPiket()
-
+        mProgressDialog = ProgressDialog(requireActivity())
         initComponent()
         setupListener()
         observer()
@@ -45,6 +47,16 @@ class PiketKelasFragment:
     }
 
     private fun observer() {
+        observe(viewModel.transparentLoading) {
+            if (it) {
+                mProgressDialog?.setTitle("Sedang memuat...")
+                mProgressDialog?.setMessage("Harap menunggu sebentar...")
+                mProgressDialog?.show()
+            } else {
+                mProgressDialog?.dismiss()
+            }
+        }
+
         observe(viewModel.listPiketResp) {
             if (it != null) {
                 binding.rvListPiketKelas.apply {

@@ -58,6 +58,7 @@ class InformasiKelasViewModel @Inject constructor(
     var deskripsiInformasi = MutableStateFlow("")
     var mediaInformasiFile = MutableStateFlow<File?>(null)
     var mediaInformasiPath = MutableStateFlow("")
+    private lateinit var requestBody: RequestBody
 
     fun initState() {
         viewModelScope.launch {
@@ -79,16 +80,24 @@ class InformasiKelasViewModel @Inject constructor(
     inner class RequestHandler {
 
         fun sendBuatInformasi() {
-            val requestBody: RequestBody = MultipartBody.Builder()
-                .setType(MultipartBody.FORM)
-                .addFormDataPart("judulpengumuman", judulInformasi.value)
-                .addFormDataPart("isipengumuman", deskripsiInformasi.value)
-                .addFormDataPart(
-                    "filepengumuman",
-                    mediaInformasiPath.value,
-                    RequestBody.create("*/*".toMediaTypeOrNull(), mediaInformasiFile.value!!)
-                )
-                .build()
+            if (mediaInformasiFile.value != null) {
+                requestBody = MultipartBody.Builder()
+                    .setType(MultipartBody.FORM)
+                    .addFormDataPart("judulpengumuman", judulInformasi.value)
+                    .addFormDataPart("isipengumuman", deskripsiInformasi.value)
+                    .addFormDataPart(
+                        "filepengumuman",
+                        mediaInformasiPath.value,
+                        RequestBody.create("*/*".toMediaTypeOrNull(), mediaInformasiFile.value!!)
+                    )
+                    .build()
+            } else {
+                requestBody = MultipartBody.Builder()
+                    .setType(MultipartBody.FORM)
+                    .addFormDataPart("judulpengumuman", judulInformasi.value)
+                    .addFormDataPart("isipengumuman", deskripsiInformasi.value)
+                    .build()
+            }
 
             handlerBuatInformasi(
                 requestBody,

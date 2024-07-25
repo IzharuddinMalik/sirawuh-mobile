@@ -1,5 +1,6 @@
 package com.sirawuh.ui.kelas.haidsiswa
 
+import android.app.ProgressDialog
 import android.widget.Toast
 import androidx.fragment.app.viewModels
 import com.google.android.material.datepicker.MaterialDatePicker
@@ -17,10 +18,11 @@ class TambahHaidSiswaFragment:
     BaseFragment<FragmentTambahHaidsiswaBinding>(FragmentTambahHaidsiswaBinding::inflate) {
 
     private val viewModel: HaidSiswaViewModel by viewModels()
+    private var mProgressDialog: ProgressDialog? = null
 
     override fun onCreated() {
         viewModel.initState()
-
+        mProgressDialog = ProgressDialog(requireActivity())
         initComponent()
         setupListener()
         observer()
@@ -60,6 +62,16 @@ class TambahHaidSiswaFragment:
     }
 
     private fun observer() {
+        observe(viewModel.transparentLoading) {
+            if (it) {
+                mProgressDialog?.setTitle("Sedang menambahkan data")
+                mProgressDialog?.setMessage("Harap menunggu sebentar...")
+                mProgressDialog?.show()
+            } else {
+                mProgressDialog?.dismiss()
+            }
+        }
+
         observe(viewModel.tanggalHaidConvert) {
             if (it != "") {
                 binding.tvPilihTanggalHaid.text = it

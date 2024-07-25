@@ -1,5 +1,6 @@
 package com.sirawuh.ui.profile
 
+import android.app.ProgressDialog
 import androidx.fragment.app.viewModels
 import com.sirawuh.R
 import com.sirawuh.core.base.BaseFragment
@@ -19,8 +20,10 @@ class ProfileFragment:
     lateinit var preferenceHelper : PreferenceHelper
 
     private val viewModel: ProfileViewModel by viewModels()
+    private var mProgressDialog: ProgressDialog? = null
 
     override fun onCreated() {
+        mProgressDialog = ProgressDialog(requireActivity())
         binding.apply {
             toolbarprofile.ivBack.setOnClickListener {
                 navigateInclusivelyToUri(R.string.home_route)
@@ -43,6 +46,16 @@ class ProfileFragment:
     }
 
     private fun observer() {
+        observe(viewModel.transparentLoading) {
+            if (it) {
+                mProgressDialog?.setTitle("Sedang Login")
+                mProgressDialog?.setMessage("Harap menunggu...")
+                mProgressDialog?.show()
+            } else {
+                mProgressDialog?.dismiss()
+            }
+        }
+
         observe(viewModel.profileResp) {
             binding.tvFullnameProfile.text = it?.namauser
             binding.tvInitialNameProfile.text = it?.namauser?.substring(0, 1)

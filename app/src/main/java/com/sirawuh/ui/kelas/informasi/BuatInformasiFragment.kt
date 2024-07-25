@@ -2,6 +2,7 @@ package com.sirawuh.ui.kelas.informasi
 
 import android.Manifest
 import android.app.Activity
+import android.app.ProgressDialog
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.net.Uri
@@ -26,9 +27,11 @@ class BuatInformasiFragment :
     BaseFragment<FragmentBuatInformasiBinding>(FragmentBuatInformasiBinding::inflate) {
 
     private val viewModel: InformasiKelasViewModel by viewModels()
+    private var mProgressDialog: ProgressDialog? = null
 
     override fun onCreated() {
         viewModel.initState()
+        mProgressDialog = ProgressDialog(requireActivity())
         binding.apply {
             toolbarBuatInformasi.tvTitle.text = getString(R.string.label_informasi_kelas)
             toolbarBuatInformasi.ivBack.setOnClickListener {
@@ -72,6 +75,16 @@ class BuatInformasiFragment :
     }
 
     private fun observer() {
+        observe(viewModel.transparentLoading) {
+            if (it) {
+                mProgressDialog?.setTitle("Sedang menambahkan data")
+                mProgressDialog?.setMessage("Harap menunggu sebentar...")
+                mProgressDialog?.show()
+            } else {
+                mProgressDialog?.dismiss()
+            }
+        }
+
         observe(viewModel.judulInformasiValid) {
             val message = if (it == false) getString(R.string.field_empty) else ""
             if (message != "") Snackbar.make(
