@@ -17,6 +17,7 @@ import com.bumptech.glide.Glide
 import com.sirawuh.data.domain.DataPengumumanResponse
 import com.sirawuh.databinding.LayouDetailPapanInformasiBinding
 import com.sirawuh.databinding.LayoutDeleteBinding
+import com.sirawuh.databinding.LayoutErrorMessageBinding
 import java.text.SimpleDateFormat
 import java.util.Locale
 
@@ -136,6 +137,30 @@ object CustomDialog {
                 dialog.dismiss()
             }
 
+            dialog.show()
+        }
+    }
+
+    fun showErrorMessage(
+        context: Context,
+        layoutInflater: LayoutInflater,
+        titleErrorMessage: String?,
+        labelErrorMessage: String?
+    ) {
+        kotlin.runCatching {
+            val dialog = Dialog(context)
+            val binding = LayoutErrorMessageBinding.inflate(layoutInflater)
+            dialog.requestWindowFeature(Window.FEATURE_NO_TITLE) // before
+            dialog.window!!.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+            dialog.setContentView(binding.root)
+            dialog.setCancelable(true)
+            dialog.window!!.setLayout(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT)
+            binding.tvTitleErrorMessage.text = titleErrorMessage
+            binding.tvLabelErrorMessage.text = labelErrorMessage
+
+            binding.ivCloseErrorMessage.setOnClickListener {
+                dialog.dismiss()
+            }
             dialog.show()
         }
     }

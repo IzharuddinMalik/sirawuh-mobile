@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_delete_dialog"
+    android:layout_marginHorizontal="@dimen/_15sdp"
+    android:layout_marginTop="@dimen/_10sdp"
+    android:padding="@dimen/_15sdp">
+
+    <ImageView
+        android:layout_width="@dimen/_24sdp"
+        android:layout_height="@dimen/_24sdp"
+        android:id="@+id/ivCloseErrorMessage"
+        android:src="@drawable/ic_close"
+        android:layout_gravity="right"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvTitleErrorMessage"
+        tools:text="Title Error Message"
+        android:textSize="@dimen/_12ssp"
+        android:textColor="@color/textColorPrimary"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:layout_marginTop="@dimen/_20sdp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvLabelErrorMessage"
+        tools:text="Label Error Message"
+        android:textSize="@dimen/_12ssp"
+        android:textColor="@color/textColorPrimary"
+        android:textAlignment="center"
+        android:layout_marginTop="@dimen/_10sdp"/>
+</LinearLayout>

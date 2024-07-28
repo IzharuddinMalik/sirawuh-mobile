@@ -10,6 +10,7 @@
     <string name="label_button_edit">Ubah</string>
     <string name="label_button_delete">Hapus</string>
     <string name="label_desc_delete">Apakah anda yakin akan menghapus ini?</string>
+    <string name="label_title_error_added">Mohon Maaf</string>
 
     // Login
     <string name="title_login_akun">Selamat datang di halaman masuk Si Rawuh,\nsilahkan isi dengan Nomor Induk Siswa/Pegawai.</string>

@@ -7,6 +7,7 @@ import com.google.android.material.datepicker.MaterialDatePicker
 import com.google.android.material.snackbar.Snackbar
 import com.sirawuh.R
 import com.sirawuh.core.base.BaseFragment
+import com.sirawuh.core.customview.CustomDialog
 import com.sirawuh.databinding.FragmentTambahBayarKasBinding
 import com.sirawuh.utils.navigateInclusivelyToUri
 import com.sirawuh.utils.navigateToUri
@@ -85,6 +86,8 @@ class TambahKasKelasFragment:
             if (it != null) {
                 if (it.success == 1) {
                     navigateInclusivelyToUri(R.string.kas_kelas_route)
+                } else {
+                    CustomDialog.showErrorMessage(requireActivity(), layoutInflater, getString(R.string.label_title_error_added), it.message)
                 }
             }
         }

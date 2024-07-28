@@ -18,6 +18,7 @@ import androidx.fragment.app.viewModels
 import com.google.android.material.snackbar.Snackbar
 import com.sirawuh.R
 import com.sirawuh.core.base.BaseFragment
+import com.sirawuh.core.customview.CustomDialog
 import com.sirawuh.databinding.FragmentTambahKehadiranBinding
 import com.sirawuh.utils.RealPathUtils
 import com.sirawuh.utils.navigateToUri
@@ -157,6 +158,8 @@ class TambahKehadiranFragment:
             if (it != null) {
                 if (it.success == 1) {
                     navigateToUri(R.string.kehadiran_kelas_route)
+                } else {
+                    CustomDialog.showErrorMessage(requireActivity(), layoutInflater, getString(R.string.label_title_error_added), it.message)
                 }
             }
         }
